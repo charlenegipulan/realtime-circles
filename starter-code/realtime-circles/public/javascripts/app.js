@@ -5,11 +5,14 @@ document.addEventListener("DOMContentLoaded", function() {
     addCircle(data);
   });
 
+  socket.on('clear-display', function(data) {
+    circles.innerHTML = '';
+  });
+
   var circles = document.getElementById('circles');
   var initials = '';
 
   circles.addEventListener('click', function(evt) {
-    // addCircle(evt.clientX, evt.clientY, randomBetween(10,125), getRandomRGBA());
     socket.emit('add-circle', {
       initials,
       x: evt.clientX,
@@ -20,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   document.getElementsByTagName('button')[0].addEventListener('click', function() {
-    circles.innerHTML = '';
+    socket.emit('clear-display');
   });
 
   do {
