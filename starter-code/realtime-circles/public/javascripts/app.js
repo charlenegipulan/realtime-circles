@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var socket = io();
 
   socket.on('add-circle', function(data) {
-    console.log(data);
+    addCircle(data);
   });
 
   var circles = document.getElementById('circles');
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
     return input ? input.toUpperCase() : '';
   }
 
-  function addCircle(x, y, dia, rgba) {
+  function addCircle({x, y, dia, rgba, initials}) {
     var el = document.createElement('div');
     el.style.left = x - Math.floor(dia / 2 + 0.5) + 'px';
     el.style.top = y - Math.floor(dia / 2 + 0.5) + 'px';
