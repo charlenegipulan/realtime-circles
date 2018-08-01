@@ -1,12 +1,22 @@
 document.addEventListener("DOMContentLoaded", function() {
   var socket = io();
-  console.log(socket);
+
+  socket.on('add-circle', function(data) {
+    console.log(data);
+  });
 
   var circles = document.getElementById('circles');
   var initials = '';
 
   circles.addEventListener('click', function(evt) {
-    addCircle(evt.clientX, evt.clientY, randomBetween(10,125), getRandomRGBA());
+    // addCircle(evt.clientX, evt.clientY, randomBetween(10,125), getRandomRGBA());
+    socket.emit('add-circle', {
+      initials,
+      x: evt.clientX,
+      y: evt.clientY,
+      dia: randomBetween(20, 125),
+      rgba: getRandomRGBA()
+    });
   });
 
   document.getElementsByTagName('button')[0].addEventListener('click', function() {
