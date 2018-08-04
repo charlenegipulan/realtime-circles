@@ -10,4 +10,4 @@
 
 ## Getting Started
 - To use, enter initials in the prompt and click anywhere in the page to display your circled initials real time. Open the app in multiple windows to view and track multiple users live!
-View deployed app here[here!](https://infinite-retreat-44376.herokuapp.com/)
+View deployed app [here!](https://infinite-retreat-44376.herokuapp.com/)
