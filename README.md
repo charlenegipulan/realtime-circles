@@ -1,5 +1,5 @@
 ## Live Circles
-- A basic app built to use and practtice implementation of socket.io by displaying circles in realtime and implement realtime communication between browser and server in a Node/Express application.
+- A basic app built to use and practice implementation of socket.io by displaying circles in realtime and implement realtime communication between browser and server in a Node/Express application.
 
 ## Screenshot
 ![screenshot](https://i.imgur.com/aUNTSvF.png "Screenshot")
